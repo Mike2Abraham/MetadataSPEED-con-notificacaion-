@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./Estilos.css">
+</head>
+<body>
+<div class="Titulo">
+       <div class="web">Proyecto Metadata</div>
+       <img class="imgs" src="./speed.png">
+       <div class="web">(Notificacion)</div>
+    </div>
+    <div class="nombre-del-video" id="marquee-text">Dandadan.season-2x6_DVD-1024p-HD-full.mp4</div>
+    <input type="text" id="entrada-titulo" placeholder="Escribe el título y presiona Enter">
+    <div class="KEY-MOVIE"></div>
+    
+    <script src="./Notificacion.js"></script>
+    <script src="./Key-metadata.js"></script>
+    <script>
+        // Ejecutar cuando se cargue la página
+        window.addEventListener('load', () => {
+            nombreClave();
+        });
+        // Capturar ENTER en el input
+        const entrada = document.getElementById("entrada-titulo");
+        entrada.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                let nuevoTitulo = entrada.value.trim();
+                if (nuevoTitulo) {
+                    // Cambiar el texto del marquee
+                    document.getElementById("marquee-text").textContent = nuevoTitulo;
+                    // Llamar a nombreClave con el nuevo título
+                    nombreClave(nuevoTitulo);
+                    // limpiar input
+                    entrada.value = "";
+                }
+            }
+        });
+    </script>
+    <style>
+    .Titulo {
+      display: flex    ;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+    .imgs {
+      width: 170px;
+      margin-top: -23px;
+    }
+    .web {
+      margin: 12px 0px;
+      font-size: 50px;
+      margin-bottom: 42px;
+    }
+    /* Estilo del input */
+    #entrada-titulo {
+      width: 80%;
+      max-width: 400px;
+      padding: 12px 16px;
+      margin: 20px auto;
+      display: block;
+      
+      background: rgba(30, 30, 30, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      outline: none;
+      
+      backdrop-filter: blur(6px);
+      transition: all 0.3s ease;
+    }
+    
+    #entrada-titulo::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+      font-style: italic;
+    }
+    
+    #entrada-titulo:focus {
+      background: rgba(50, 50, 50, 0.9);
+      border-color: #00bcd4;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+    }
+    </style>
+</body>
+</html>
