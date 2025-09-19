@@ -1,6 +1,6 @@
 // ---------------- Configuración de API Keys ----------------
 const CLAVES_API = [
-    'a63f1ef4',    // tu key principal
+    'tu_key_1',    // tu key principal
     // 'tu_key_2',
     // 'tu_key_3'
 ].filter(clave => clave && clave !== '' && !clave.includes('tu_key_'));
@@ -150,3 +150,4 @@ function notificarPeliculaEncontrada(datosPelicula) {
     duration: 8000
   });
 }
+
