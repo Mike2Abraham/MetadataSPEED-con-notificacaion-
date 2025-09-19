@@ -1,9 +1,8 @@
 # MetadataSPEED-con-notificacaion-
 Este proyecto permite extraer metadatos de películas o series desde la OMDb API Sistema de notificaciones elegante: Muestra posters, múltiples líneas de texto y animaciones  Interfaz minimalista: Input para búsqueda manual y renderizado automático
 🎬 Metadata Notifier + OMDb API
-https://img.shields.io/badge/JavaScript-ES6+-yellow.svg
-https://img.shields.io/badge/OMDb-API-orange.svg
-https://img.shields.io/badge/License-MIT-green.svg
+
+La API la creas aqui> https://www.omdbapi.com/ gratuita solo con tu GMAIL de Google
 
 Este proyecto permite extraer metadatos de películas o series desde la OMDb API usando el nombre de archivo como entrada. Incluye un sistema de notificaciones personalizadas en pantalla que se puede reutilizar para cualquier propósito.
 
